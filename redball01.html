@@ -20,48 +20,82 @@ function movedown()
 {
 redball.top=redball.top+5;
 }
+function movedownright ()
+{
+movedown ();
+moveright ();
+}
+function movedownleft ()
+{
+movedown ();
+moveleft ();
+}
+function moveupleft ()
+{
+moveup ();
+moveleft ();
+}
+function moveupright ()
+{
+moveup ();
+moveleft ();
+}
 function movesquare()
 {
-redball.left=redball.left+5;
-redball.left=redball.left+5;
-redball.left=redball.left+5;
-redball.left=redball.left+5;
-redball.left=redball.left+5;
-redball.left=redball.left+5;
-redball.left=redball.left+5;
-redball.left=redball.left+5;
-redball.left=redball.left+5;
-redball.left=redball.left+5;
-redball.top=redball.top+5;
-redball.top=redball.top+5;
-redball.top=redball.top+5;
-redball.top=redball.top+5;
-redball.top=redball.top+5;
-redball.top=redball.top+5;
-redball.top=redball.top+5;
-redball.top=redball.top+5;
-redball.top=redball.top+5;
-redball.top=redball.top+5;
-redball.left=redball.left-5;
-redball.left=redball.left-5;
-redball.left=redball.left-5;
-redball.left=redball.left-5;
-redball.left=redball.left-5;
-redball.left=redball.left-5;
-redball.left=redball.left-5;
-redball.left=redball.left-5;
-redball.left=redball.left-5;
-redball.left=redball.left-5;
-redball.top=redball.top-5;
-redball.top=redball.top-5;
-redball.top=redball.top-5;
-redball.top=redball.top-5;
-redball.top=redball.top-5;
-redball.top=redball.top-5;
-redball.top=redball.top-5;
-redball.top=redball.top-5;
-redball.top=redball.top-5;
-redball.top=redball.top-5;
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+}
+function movediamond ()
+{
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+
 }
 function sayhello()
 {
@@ -75,6 +109,7 @@ alert("hello Taneisha");
 <button onclick="moveup();">move up</button>
 <button onclick="movedown();">move down</button>
 <button onclick="movesquare ();"> move square</button>
+<button onclick="movediamond ();"> move diamond</button>
 <img src="redball.jpg" id="redball"/>
 </body>
 </html>

@@ -1,0 +1,377 @@
+<!doctype html><html>
+<head> 
+<title>red ball part 1</title>
+<script src="http://lrn.icstars.org/redball.js"></script>
+</head>
+<script>
+function moveleft()
+{
+redball.left=redball.left-5;
+}
+function moveright()
+{
+redball.left=redball.left+5;
+}
+function moveup()
+{
+redball.top=redball.top-5;
+}
+function movedown()
+{
+redball.top=redball.top+5;
+}
+function movedownright ()
+{
+movedown ();
+moveright ();
+}
+function movedownleft ()
+{
+movedown ();
+moveleft ();
+}
+function moveupleft ()
+{
+moveup ();
+moveleft ();
+}
+function moveupright ()
+{
+moveup ();
+moveright ();
+}
+function movesquare()
+{
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+moveright ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+movedown ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveleft ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+moveup ();
+}
+function movediamond ()
+{
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+}
+function movetriangle ()
+{
+movedownright();
+movedownright();
+movedownright();
+movedownright();
+movedownright();
+movedownright();
+movedownright();
+movedownright();
+movedownright();
+movedownright();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+moveupright ();
+}
+function bounceball ()
+{
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownright ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+movedownleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+moveupleft ();
+}
+function sayhello()
+{
+alert("hello Taneisha");
+}
+</script>
+<body>hello world
+<button onclick="sayhello();">hello world</button>
+<button onclick="moveleft();">move left</button>
+<button onclick="moveright();">move right</button>
+<button onclick="moveup();">move up</button>
+<button onclick="movedown();">move down</button>
+<button onclick="movesquare ();"> move square</button>
+<button onclick="movediamond ();"> move diamond</button>
+<button onclick="movetriangle ();"> move triangle</button>
+<button onclick="bounceball ();"> bounce ball</button>
+<img src="redball.jpg" id="redball"/>
+</body>
+</html>
