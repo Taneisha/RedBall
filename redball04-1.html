@@ -1,0 +1,61 @@
+<html>
+<head> 
+<style>
+.ball{
+	position:absolute;
+	left:200px;
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+</script>
+<script>
+function Ball (cssid)
+{
+	this.moveright=function()
+	{
+		var pos=$(cssid).offset();
+		console.log("left"+pos.left);
+		console.log("top"+pos.top);
+		pos.left=pos.left+20;
+		$(cssid).offset(pos);
+	}
+	this.movedown=function()
+	{
+		var pos=$(cssid).offset();
+		console.log("top"+pos.top);
+		pos.top=pos.top+20;
+		$(cssid).offset(pos);
+		
+	}
+	this.moveleft=function()
+	{
+		var pos=$(cssid).offset();
+		pos.left=pos.left-20;
+		$(cssid).offset(pos);
+		
+	}
+	this.moveup=function()
+	{
+		var pos=$(cssid).offset();
+		pos.top=pos.top-20;
+		$(cssid).offset(pos);
+	}
+}
+var redball=new Ball("#redball");
+var greenball=new Ball("#greenball");
+var blueball=new Ball ("#greenball");
+var brownball=new Ball ("#brownball");
+var pinkball=new Ball ("#pinkball");
+var eightball=new Ball ("#eightball");
+</script>
+</head>
+<body>
+<img src="redball.jpg"id="redball" class="ball"/>
+<img src="greenball.jpg"id="greenball" class="ball"/>
+<img src="blueball.jpg"id="blueball" class="ball"/>
+<img src="brownball.jpg"id="brownball" class="ball"/>
+<img src="pinkball.jpg"id="pinkball" class="ball"/>
+<img src="eightball.jpg"id="eightball" class="ball"/>
+
+</body>
+</html>

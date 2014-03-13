@@ -1,0 +1,141 @@
+<!doctype html><html>
+<head> 
+<title>red ball part 1</title>
+<script src="http://lrn.icstars.org/redball.js"></script>
+</head>
+<script>
+function moveleft()
+{
+redball.left=redball.left-5;
+}
+function moveright()
+{
+redball.left=redball.left+5;
+}
+function moveup()
+{
+redball.top=redball.top-5;
+}
+function movedown()
+{
+redball.top=redball.top+5;
+}
+function movedownright ()
+{
+movedown ();
+moveright ();
+}
+function movedownleft ()
+{
+movedown ();
+moveleft ();
+}
+function moveupleft ()
+{
+moveup ();
+moveleft ();
+}
+function moveupright ()
+{
+moveup ();
+moveright ();
+}
+function movesquare()
+{
+	for(var i=1;i<=10;i++)
+	{
+	moveright();
+	}
+	for(var i=1;i<=10;i++)
+	{
+	movedown();
+	}
+	for(var i=1;i<=10;i++)
+	{
+	moveleft();
+	}
+	for(var i=1;i<=10;i++)
+	{
+	moveup();
+	}
+}
+function movediamond ()
+{
+	for(var i=1;i<=10;i++)
+	{
+	movedownright();
+	}
+	for(var i=1;i<=10;i++)
+	{
+	movedownleft();
+	}
+	for(var i=1;i<=10;i++)
+	{
+	moveupleft();
+	}
+	for(var i=1;i<=10;i++)
+	{
+	moveupright();
+	}
+}
+function movetriangle ()
+{
+	for(var i=1;i<=10;i++)
+	{
+	movedownright();
+	}
+	for(var i=1;i<=20;i++)
+	{
+	moveleft();
+	}
+	for(var i=1;i<=10;i++)
+	{
+	moveupright();
+	}
+}
+function bounceball ()
+{
+	for(var i=1;i<=14;i++)
+	{
+	moveupright();
+	}
+	for(var i=1;i<=70;i++)
+	{
+	movedownright();
+	}
+	for(var i=1;i<=42;i++)
+	{
+	movedownleft();
+	}
+	for(var i=1;i<=58;i++)
+	{
+	moveupleft();
+	}
+}
+function moveup10 ()
+{
+	for(var i=1;i<=10;i++)
+	{
+	moveup();
+	}
+}
+function sayhello()
+{
+alert("hello Taneisha");
+}
+</script>
+<body>hello world
+<button onclick="sayhello();">hello world</button>
+<button onclick="moveleft();">move left</button>
+<button onclick="moveright();">move right</button>
+<button onclick="moveup();">move up</button>
+<button onclick="movedown();">move down</button>
+<button onclick="movesquare ();"> move square</button>
+<button onclick="movediamond ();"> move diamond</button>
+<button onclick="movetriangle ();"> move triangle</button>
+<button onclick="bounceball ();"> bounce ball</button>
+<button onclick="moveup10 ();"> up 10</button>
+<button onclick="makex"();"> move in x</button>
+<img src="redball.jpg" id="redball"/>
+</body>
+</html>
