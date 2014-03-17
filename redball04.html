@@ -40,10 +40,38 @@ function Ball (cssid)
 		pos.top=pos.top-20;
 		$(cssid).offset(pos);
 	}
+	this.moveupleft=function()
+	{
+		var pos=$(cssid).offset();
+		pos.left=pos.left-20;
+		pos.top=pos.top-20;
+		$(cssid).offset(pos);
+	}
+	this.moveupright=function()
+	{
+		var pos=$(cssid).offset();
+		pos.top=pos.top-20;
+		pos.left=pos.left+20;
+		$(cssid).offset(pos);
+	}
+	this.movedownleft=function()
+	{
+		var pos=$(cssid).offset();
+		pos.top=pos.top+20;
+		pos.left=pos.left-20;
+		$(cssid).offset(pos);
+	}
+	this.movedownright=function()
+	{
+		var pos=$(cssid).offset();
+		pos.top=pos.top+20;
+		pos.left=pos.left+20;
+		$(cssid).offset(pos);
+	}
 }
 var redball=new Ball("#redball");
 var greenball=new Ball("#greenball");
-var blueball=new Ball ("#greenball");
+var blueball=new Ball ("#blueball");
 var brownball=new Ball ("#brownball");
 var pinkball=new Ball ("#pinkball");
 var eightball=new Ball ("#eightball");
