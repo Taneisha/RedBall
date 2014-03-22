@@ -1,10 +1,22 @@
 <html>
 <head> 
 <style>
-.ball{
+#greenball{
 	position:absolute;
-	left:200px;
-	}
+	left:300px;
+	top:300px;}
+#blueball{
+	position:absolute;
+	left:600px;
+	top:300px;}
+#brownball{
+	position:absolute;
+	left:350px;
+	top:500px;}
+#pinkball{
+	position:absolute;
+	left:600px;
+	top:500px;}
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
 </script>
@@ -69,21 +81,230 @@ function Ball (cssid)
 		$(cssid).offset(pos);
 	}
 }
-var redball=new Ball("#redball");
 var greenball=new Ball("#greenball");
 var blueball=new Ball ("#blueball");
 var brownball=new Ball ("#brownball");
 var pinkball=new Ball ("#pinkball");
-var eightball=new Ball ("#eightball");
+
 </script>
 </head>
 <body>
-<img src="redball.jpg"id="redball" class="ball"/>
+
 <img src="greenball.jpg"id="greenball" class="ball"/>
 <img src="blueball.jpg"id="blueball" class="ball"/>
 <img src="brownball.jpg"id="brownball" class="ball"/>
 <img src="pinkball.jpg"id="pinkball" class="ball"/>
-<img src="eightball.jpg"id="eightball" class="ball"/>
 
+<table id="table1" border="1">
+  <tr>
+    <td><img src="upleftbutton.gif" id="upleftbutton"/></td>
+    <td><img src="upbutton.jpg" id="upbutton"/></td>
+    <td><img src="uprightbutton.gif" id="uprightbutton"/></td>
+  </tr>
+  <tr>
+    <td><img src="leftbutton.jpg" id="leftbutton"/></td>
+    <td>Green</td>
+    <td><img src="rightbutton.jpg" id="rightbutton"/></td>
+  </tr>
+  <tr>
+    <td><img src="downleftbutton.gif" id="downleftbutton"/></td>
+    <td><img src="downbutton.jpg" id="downbutton"/></td>
+    <td><img src="downrightbutton.gif" id="downrightbutton"/></td>
+  </tr>
+  
+</table>
+
+<script>
+  $("#table1 #uprightbutton").click(function(){ 
+   greenball.moveupright();
+}); 
+
+ $("#table1 #upbutton").click(function(){ 
+  greenball.moveup();
+});
+
+ $("#table1 #upleftbutton").click(function(){ 
+   greenball.moveupleft();
+});
+ 
+ $("#table1 #rightbutton").click(function(){ 
+   greenball.moveright();
+});
+
+ $("#table1 #leftbutton").click(function(){ 
+   greenball.moveleft();
+});
+
+ $("#table1 #downrightbutton").click(function(){ 
+   greenball.movedownright();
+});
+
+ $("#table1 #downbutton").click(function(){ 
+   greenball.movedown();
+});
+
+ $("#table1 #downleftbutton").click(function(){ 
+   greenball.movedownleft();
+});
+</script>
+										
+<table id="table2" border="1" align="right" style="margin-top:-270">
+  <tr>
+    <td><img src="upleftbutton.gif" id="upleftbutton"/></td>
+    <td><img src="upbutton.jpg" id="upbutton"/></td>
+    <td><img src="uprightbutton.gif" id="uprightbutton"/></td>
+  </tr>
+  <tr>
+    <td><img src="leftbutton.jpg" id="leftbutton"/></td>
+    <td>Blue</td>
+    <td><img src="rightbutton.jpg" id="rightbutton"/></td>
+  </tr>
+  <tr>
+    <td><img src="downleftbutton.gif" id="downleftbutton"/></td>
+    <td><img src="downbutton.jpg" id="downbutton"/></td>
+    <td><img src="downrightbutton.gif" id="downrightbutton"/></td>
+  </tr>
+  
+</table>
+
+<script>
+  $("#table2 #uprightbutton").click(function(){ 
+   blueball.moveupright();
+}); 
+
+ $("#table2 #upbutton").click(function(){ 
+  blueball.moveup();
+});
+
+ $("#table2 #upleftbutton").click(function(){ 
+   blueball.moveupleft();
+});
+ 
+ $("#table2 #rightbutton").click(function(){ 
+   blueball.moveright();
+});
+
+ $("#table2 #leftbutton").click(function(){ 
+   blueball.moveleft();
+});
+
+ $("#table2 #downrightbutton").click(function(){ 
+   blueball.movedownright();
+});
+
+ $("#table2 #downbutton").click(function(){ 
+   blueball.movedown();
+});
+
+ $("#table2 #downleftbutton").click(function(){ 
+   blueball.movedownleft();
+});
+</script>
+
+<table id="table3" border="1" style="margin-top:500">
+  <tr>
+    <td><img src="upleftbutton.gif" id="upleftbutton"/></td>
+    <td><img src="upbutton.jpg" id="upbutton"/></td>
+    <td><img src="uprightbutton.gif" id="uprightbutton"/></td>
+  </tr>
+  <tr>
+    <td><img src="leftbutton.jpg" id="leftbutton"/></td>
+    <td>Brown</td>
+    <td><img src="rightbutton.jpg" id="rightbutton"/></td>
+  </tr>
+  <tr>
+    <td><img src="downleftbutton.gif" id="downleftbutton"/></td>
+    <td><img src="downbutton.jpg" id="downbutton"/></td>
+    <td><img src="downrightbutton.gif" id="downrightbutton"/></td>
+  </tr>
+  
+</table>
+
+<script>
+  $("#table3 #uprightbutton").click(function(){ 
+   brownball.moveupright();
+}); 
+
+ $("#table3 #upbutton").click(function(){ 
+  brownball.moveup();
+});
+
+ $("#table3 #upleftbutton").click(function(){ 
+   brownball.moveupleft();
+});
+ 
+ $("#table3 #rightbutton").click(function(){ 
+   brownball.moveright();
+});
+
+ $("#table3 #leftbutton").click(function(){ 
+   brownball.moveleft();
+});
+
+ $("#table3 #downrightbutton").click(function(){ 
+   brownball.movedownright();
+});
+
+ $("#table3 #downbutton").click(function(){ 
+   brownball.movedown();
+});
+
+ $("#table3 #downleftbutton").click(function(){ 
+   brownball.movedownleft();
+});
+</script>
+
+<table id="table4" border="1" align="right" style="margin-top:-270">
+  <tr>
+    <td><img src="upleftbutton.gif" id="upleftbutton"/></td>
+    <td><img src="upbutton.jpg" id="upbutton"/></td>
+    <td><img src="uprightbutton.gif" id="uprightbutton"/></td>
+  </tr>
+  <tr>
+    <td><img src="leftbutton.jpg" id="leftbutton"/></td>
+    <td>Pink</td>
+    <td><img src="rightbutton.jpg" id="rightbutton"/></td>
+  </tr>
+  <tr>
+    <td><img src="downleftbutton.gif" id="downleftbutton"/></td>
+    <td><img src="downbutton.jpg" id="downbutton"/></td>
+    <td><img src="downrightbutton.gif" id="downrightbutton"/></td>
+  </tr>
+  </table>
+
+<script>
+  $("#table4 #uprightbutton").click(function(){ 
+   pinkball.moveupright();
+}); 
+
+ $("#table4 #upbutton").click(function(){ 
+  pinkball.moveup();
+});
+
+ $("#table4 #upleftbutton").click(function(){ 
+   pinkball.moveupleft();
+});
+ 
+ $("#table4 #rightbutton").click(function(){ 
+   pinkball.moveright();
+});
+
+ $("#table4 #leftbutton").click(function(){ 
+   pinkball.moveleft();
+});
+
+ $("#table4 #downrightbutton").click(function(){ 
+   pinkball.movedownright();
+});
+
+ $("#table4 #downbutton").click(function(){ 
+   pinkball.movedown();
+});
+
+ $("#table4 #downleftbutton").click(function(){ 
+   pinkball.movedownleft();
+});
+</script>  
+ 
 </body>
 </html>
