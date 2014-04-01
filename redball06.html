@@ -64,40 +64,49 @@ function Ball (cssid)
 
 	this.moveright=function()
 	{
+    var hittingwall=this.checkwallhit()
+    if(hittingwall==false)
+    {
 		var pos=$(cssid).offset();
 		console.log("left"+pos.left);
 		console.log("top"+pos.top);
 		pos.left=pos.left+20;
 		$(cssid).offset(pos);
 	}
+    else
+    {
+      console.log("hit");
+    }
+  }
+
 	this.movedown=function()
 	{
-    var hittingwall=this.checkwallhit()
-    if(hittingwall==false)
+      var hittingwall=this.checkwallhit()
+      if(hittingwall==false)
     {
 		var pos=$(cssid).offset();
 		console.log("top"+pos.top);
 		pos.top=pos.top+20;
 		$(cssid).offset(pos);
   }
-  else
-  {
-      console.log("hit)";
-  }
+    else
+    {
+      console.log("hit");
+    }
 		
-}
+  }
 
 	this.moveleft=function()
-	 {
+	{
         var hittingwall=this.checkwallhit()
-    if(hittingwall==false)
-     {
+        if(hittingwall==false)
+    {
         var pos=$(cssid).offset();
         pos.left=pos.left-20;
         $(cssid).offset(pos);
-    }
-    else
-    {
+      }
+      else
+      {
 
         console.log("hit");
     }
@@ -105,10 +114,20 @@ function Ball (cssid)
 
 	this.moveup=function()
 	{
-		var pos=$(cssid).offset();
-		pos.top=pos.top-20;
-		$(cssid).offset(pos);
-	}
+       var hittingwall=this.checkwallhit()
+        if(hittingwall==false)
+    {
+		  var pos=$(cssid).offset();
+		  pos.top=pos.top-20;
+		  $(cssid).offset(pos);
+	    }
+     else
+      {
+
+        console.log("hit");
+    }
+  }  
+
 	this.moveupleft=function()
 	{
 		var pos=$(cssid).offset();
