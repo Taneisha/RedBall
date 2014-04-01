@@ -1,0 +1,3 @@
+Pseudo Code
+
+On right click, ball goes right.  If ball right hit ball left then ball stops.

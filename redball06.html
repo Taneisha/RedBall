@@ -1,6 +1,13 @@
 <html>
 <head> 
 <style>
+#wall
+{position:absolute;
+top:200px;
+left:1000px;
+width:10px;
+height:500px;
+background-color:blue;}
 #greenball{
 	position:absolute;
 	left:300px;
@@ -23,6 +30,38 @@
 <script>
 function Ball (cssid)
 {
+  <!--check wall hit below-->
+  
+  this.checkwallhit=function()
+  {
+
+    var hit=false;
+    var ballheight=$(cssid).height();
+    var ballpos=$(cssid).offset();
+    var balltop=ballpos.top;
+    var ballbottom=balltop+ballheight;
+    var ballwidth=$(cssid).width();
+    var ballleft=ballpos.left;
+    var ballright=ballleft+ballwidth;
+
+    var wallheight=$("#wall").height();
+    var wallpos=$("#wall").offset();
+    var walltop=wallpos.top;
+    var wallbottom=walltop+wallheight;
+    var wallwidth=$("#wall").width();
+    var wallleft=wallpos.left;
+    var wallright=wallleft+wallwidth;
+
+    if (ballright>wallleft &&
+      ballbottom>walltop &&
+      balltop<wallbottom &&
+      ballleft<wallright)
+    {
+       hit=true;
+    }
+    return hit;
+  };
+
 	this.moveright=function()
 	{
 		var pos=$(cssid).offset();
@@ -33,19 +72,37 @@ function Ball (cssid)
 	}
 	this.movedown=function()
 	{
+    var hittingwall=this.checkwallhit()
+    if(hittingwall==false)
+    {
 		var pos=$(cssid).offset();
 		console.log("top"+pos.top);
 		pos.top=pos.top+20;
 		$(cssid).offset(pos);
+  }
+  else
+  {
+      console.log("hit)";
+  }
 		
-	}
+}
+
 	this.moveleft=function()
-	{
-		var pos=$(cssid).offset();
-		pos.left=pos.left-20;
-		$(cssid).offset(pos);
-		
-	}
+	 {
+        var hittingwall=this.checkwallhit()
+    if(hittingwall==false)
+     {
+        var pos=$(cssid).offset();
+        pos.left=pos.left-20;
+        $(cssid).offset(pos);
+    }
+    else
+    {
+
+        console.log("hit");
+    }
+  }
+
 	this.moveup=function()
 	{
 		var pos=$(cssid).offset();
@@ -89,6 +146,7 @@ var pinkball=new Ball ("#pinkball");
 </script>
 </head>
 <body>
+  <div id="wall"></div>
 
 <img src="greenball.jpg"id="greenball" class="ball"/>
 <img src="blueball.jpg"id="blueball" class="ball"/>
